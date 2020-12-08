@@ -1,0 +1,44 @@
+{
+  "npmScope": "desjardins-espace-conseil",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "espace-conseil-app1": {
+      "tags": []
+    },
+    "espace-conseil-app1-e2e": {
+      "tags": [],
+      "implicitDependencies": ["espace-conseil-app1"]
+    },
+    "espace-conseil-app2": {
+      "tags": []
+    },
+    "espace-conseil-app2-e2e": {
+      "tags": [],
+      "implicitDependencies": ["espace-conseil-app2"]
+    },
+    "ui-component": {
+      "tags": []
+    }
+  }
+}

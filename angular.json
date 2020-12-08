@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "projects": {
+    "espace-conseil-app1": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/espace-conseil-app1",
+      "sourceRoot": "apps/espace-conseil-app1/src",
+      "prefix": "desjardins-espace-conseil",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/espace-conseil-app1",
+            "index": "apps/espace-conseil-app1/src/index.html",
+            "main": "apps/espace-conseil-app1/src/main.ts",
+            "polyfills": "apps/espace-conseil-app1/src/polyfills.ts",
+            "tsConfig": "apps/espace-conseil-app1/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/espace-conseil-app1/src/favicon.ico",
+              "apps/espace-conseil-app1/src/assets"
+            ],
+            "styles": [],
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/espace-conseil-app1/src/environments/environment.ts",
+                  "with": "apps/espace-conseil-app1/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "espace-conseil-app1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "espace-conseil-app1:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "espace-conseil-app1:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/espace-conseil-app1/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/espace-conseil-app1/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "espace-conseil-app1-e2e": {
+      "root": "apps/espace-conseil-app1-e2e",
+      "sourceRoot": "apps/espace-conseil-app1-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/espace-conseil-app1-e2e/cypress.json",
+            "tsConfig": "apps/espace-conseil-app1-e2e/tsconfig.e2e.json",
+            "devServerTarget": "espace-conseil-app1:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "espace-conseil-app1:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/espace-conseil-app1-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "espace-conseil-app2": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/espace-conseil-app2",
+      "sourceRoot": "apps/espace-conseil-app2/src",
+      "prefix": "desjardins-espace-conseil",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/espace-conseil-app2",
+            "index": "apps/espace-conseil-app2/src/index.html",
+            "main": "apps/espace-conseil-app2/src/main.ts",
+            "polyfills": "apps/espace-conseil-app2/src/polyfills.ts",
+            "tsConfig": "apps/espace-conseil-app2/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/espace-conseil-app2/src/favicon.ico",
+              "apps/espace-conseil-app2/src/assets"
+            ],
+            "styles": ["apps/espace-conseil-app1/src/custom-theme.scss", "apps/espace-conseil-app2/src/styles.css"],
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/espace-conseil-app2/src/environments/environment.ts",
+                  "with": "apps/espace-conseil-app2/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "espace-conseil-app2:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "espace-conseil-app2:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "espace-conseil-app2:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/espace-conseil-app2/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/espace-conseil-app2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "espace-conseil-app2-e2e": {
+      "root": "apps/espace-conseil-app2-e2e",
+      "sourceRoot": "apps/espace-conseil-app2-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/espace-conseil-app2-e2e/cypress.json",
+            "tsConfig": "apps/espace-conseil-app2-e2e/tsconfig.e2e.json",
+            "devServerTarget": "espace-conseil-app2:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "espace-conseil-app2:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/espace-conseil-app2-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ui-component": {
+      "projectType": "library",
+      "root": "libs/ui-component",
+      "sourceRoot": "libs/ui-component/src",
+      "prefix": "desjardins-espace-conseil",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui-component/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-component/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "espace-conseil-app1"
+}
