@@ -23,3 +23,25 @@ Pour représenter ces différents cas d'utilisation en UML (Unified Modeling Lan
    - Utilisez des diagrammes d'activité pour modéliser le flux d'activités à l'intérieur des cas d'utilisation, montrant les différentes étapes et décisions.
 
 En combinant ces différents types de diagrammes UML, vous pouvez fournir une représentation complète des différents cas d'utilisation d'Azure API Management, en mettant l'accent sur les interactions entre les acteurs et le système. Cela permettra de mieux comprendre les scénarios impliquant les développeurs, les administrateurs et les propriétaires d'entreprise.
+
+Description :       |
+   | Permet au propriétaire|
+   | d'entreprise d'exposer|
+   | une API interne ou    |
+   | externe pour un accès |
+   | contrôlé.             |
+   | Scénario Principal :|
+   | 1. Le propriétaire   |
+   |    accède au portail  |
+   |    d'administration.  |
+   | 2. Le système vérifie |
+   |    les autorisations. |
+   | 3. Le propriétaire   |
+   |    spécifie les détails|
+   |    de l'API à exposer.|
+   | 4. Le système enregistre|
+   |    les paramètres      |
+   |    d'exposition.       |
+   | 5. L'API est exposée   |
+   |    selon les paramètres|
+   |    spécifiés. 
