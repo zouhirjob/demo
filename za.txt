@@ -1,52 +1,45 @@
-**Diagramme de Cas d'Utilisation (Cas d'Utilisation UML) :**
+Bien sûr, pour ajouter davantage de détails à votre cas d'utilisation "Gérer les APIs" avec Azure API Management, vous pouvez inclure des descriptions spécifiques des activités, des conditions et des interactions. Voici une version étendue du diagramme d'activité avec plus de détails :
 
-![Diagramme de Cas d'Utilisation](https://i.imgur.com/Cu9yy1g.png)
+![Diagramme d'Activité Étendu](https://i.imgur.com/J0jC1xH.png)
 
-*Description du Diagramme de Cas d'Utilisation UML :*
-- **Acteurs :**
-  - L'Administrateur API Management
-  - Les Développeurs d'API
+*Description étendue du Diagramme d'Activité UML :*
 
-- **Cas d'Utilisation :**
-  - **Gérer les APIs :**
-    - Inclut les sous-cas d'utilisation tels que "Configurer l'API," "Modifier l'API," et "Supprimer l'API."
+1. **Commencement :**
+   - L'utilisateur se connecte à Azure API Management.
 
-**Diagramme de BPMN (Business Process Model and Notation) :**
+2. **Sélection de l'API :**
+   - L'utilisateur choisit l'API à gérer parmi une liste d'API disponibles.
 
-![Diagramme de BPMN](https://i.imgur.com/JMbU7zL.png)
+3. **Configuration de l'API :**
+   - L'utilisateur peut effectuer plusieurs activités de configuration :
+      - Définir les points de terminaison.
+      - Configurer les autorisations d'accès.
+      - Spécifier les versions de l'API.
 
-*Description du Diagramme de BPMN :*
-1. **Processus Global : "Gérer les APIs"**
-   - Démarre par l'authentification de l'utilisateur.
-   - L'utilisateur sélectionne une API à gérer.
-   - Le processus comprend la configuration de l'API, la validation des changements et l'application des modifications.
+4. **Validation des Changements :**
+   - Le système vérifie la validité de la configuration :
+      - Vérification de la syntaxe des paramètres.
+      - Contrôle des autorisations.
 
-2. **Activités :**
-   - **Identification et Authentification :**
-     - L'utilisateur s'authentifie.
-   - **Sélection de l'API :**
-     - L'utilisateur choisit une API spécifique.
-   - **Configuration :**
-     - Inclut la modification des paramètres de l'API.
-   - **Validation :**
-     - Vérification des modifications avant application.
-   - **Application des Modifications :**
-     - Les modifications sont appliquées à l'API sélectionnée.
+5. **Décision après Validation :**
+   - Si la configuration est valide :
+      - Le processus continue à "Application des Modifications."
+   - Sinon :
+      - Retour à "Configuration de l'API" avec affichage des erreurs.
 
-3. **Événements :
-   - **Erreurs de Configuration :**
-     - Si des erreurs surviennent pendant la configuration, l'utilisateur est informé et peut revenir en arrière pour corriger.
-   - **Problèmes d'Authentification :**
-     - Si l'authentification échoue, le processus est interrompu avec un message d'erreur.
+6. **Application des Modifications :**
+   - Le système met à jour la configuration de l'API avec les changements validés.
+   - Une notification est envoyée à l'administrateur API Management.
 
-4. **Passerelles (Gateways) :**
-   - **Décision après Validation :**
-     - Basée sur la validation, le processus peut bifurquer vers l'application des modifications ou le retour à la configuration.
+7. **Audit et Journalisation :**
+   - Enregistrement des modifications effectuées dans les journaux d'audit.
 
-**Remarques :**
-- Les rectangles représentent les activités.
-- Les losanges représentent les décisions ou points de contrôle.
-- Les flèches indiquent la séquence des activités.
-- Les cercles représentent les événements déclencheurs.
+8. **Fin :**
+   - Le processus se termine, et les modifications sont maintenant en vigueur.
 
-Ce schéma combine les notations UML et BPMN pour offrir une représentation complète et visuelle du processus de gestion des APIs avec Azure API Management.
+**Ajouts Importants :**
+- **Activités de Configuration Étendues :** Des activités spécifiques de configuration ont été détaillées pour fournir une vue plus approfondie du processus de configuration de l'API.
+- **Validation des Changements :** Des détails sur la vérification syntaxique et les contrôles d'autorisation ont été ajoutés.
+- **Audit et Journalisation :** Une étape a été ajoutée pour souligner l'importance de l'audit des modifications apportées aux API.
+
+Ces ajouts rendent le diagramme d'activité plus détaillé et offrent une meilleure compréhension du processus complet de gestion des APIs avec Azure API Management. Vous pouvez personnaliser davantage en fonction des spécificités de votre environnement et des besoins de votre organisation.
