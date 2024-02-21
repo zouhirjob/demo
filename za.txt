@@ -1,45 +1,60 @@
-Bien sûr, pour ajouter davantage de détails à votre cas d'utilisation "Gérer les APIs" avec Azure API Management, vous pouvez inclure des descriptions spécifiques des activités, des conditions et des interactions. Voici une version étendue du diagramme d'activité avec plus de détails :
+**Fonctionnalité : Administrer la Plateforme avec Azure API Management**
 
-![Diagramme d'Activité Étendu](https://i.imgur.com/J0jC1xH.png)
+**Description de la Fonctionnalité :**
 
-*Description étendue du Diagramme d'Activité UML :*
+L'administration de la plateforme Azure API Management englobe la gestion des aspects systémiques, des utilisateurs et des configurations globales de la plateforme. Cette fonctionnalité permet aux administrateurs de maintenir, de surveiller et d'optimiser l'environnement d'API pour assurer une performance optimale et une conformité aux exigences opérationnelles.
 
-1. **Commencement :**
-   - L'utilisateur se connecte à Azure API Management.
+**Acteurs :**
 
-2. **Sélection de l'API :**
-   - L'utilisateur choisit l'API à gérer parmi une liste d'API disponibles.
+1. **Administrateur de la Plateforme :** Utilisateur autorisé à effectuer des tâches d'administration au niveau global de la plateforme.
 
-3. **Configuration de l'API :**
-   - L'utilisateur peut effectuer plusieurs activités de configuration :
-      - Définir les points de terminaison.
-      - Configurer les autorisations d'accès.
-      - Spécifier les versions de l'API.
+**Préconditions :**
 
-4. **Validation des Changements :**
-   - Le système vérifie la validité de la configuration :
-      - Vérification de la syntaxe des paramètres.
-      - Contrôle des autorisations.
+1. L'accès approprié en tant qu'administrateur de la plateforme.
+2. Une infrastructure Azure API Management déployée et opérationnelle.
 
-5. **Décision après Validation :**
-   - Si la configuration est valide :
-      - Le processus continue à "Application des Modifications."
-   - Sinon :
-      - Retour à "Configuration de l'API" avec affichage des erreurs.
+**Postconditions :**
 
-6. **Application des Modifications :**
-   - Le système met à jour la configuration de l'API avec les changements validés.
-   - Une notification est envoyée à l'administrateur API Management.
+1. Les configurations de la plateforme sont mises à jour conformément aux besoins.
+2. Les utilisateurs ont accès aux API conformément aux autorisations définies.
 
-7. **Audit et Journalisation :**
-   - Enregistrement des modifications effectuées dans les journaux d'audit.
+**Flow (Déroulement) :**
 
-8. **Fin :**
-   - Le processus se termine, et les modifications sont maintenant en vigueur.
+1. **Connexion :**
+   - L'administrateur se connecte au portail d'administration Azure API Management.
 
-**Ajouts Importants :**
-- **Activités de Configuration Étendues :** Des activités spécifiques de configuration ont été détaillées pour fournir une vue plus approfondie du processus de configuration de l'API.
-- **Validation des Changements :** Des détails sur la vérification syntaxique et les contrôles d'autorisation ont été ajoutés.
-- **Audit et Journalisation :** Une étape a été ajoutée pour souligner l'importance de l'audit des modifications apportées aux API.
+2. **Navigation et Configuration :**
+   - L'administrateur navigue à travers l'interface pour accéder aux paramètres globaux de la plateforme.
+   - Il ajuste les configurations système, y compris les paramètres de sécurité, les politiques d'accès, et les configurations réseau.
 
-Ces ajouts rendent le diagramme d'activité plus détaillé et offrent une meilleure compréhension du processus complet de gestion des APIs avec Azure API Management. Vous pouvez personnaliser davantage en fonction des spécificités de votre environnement et des besoins de votre organisation.
+3. **Gestion des Utilisateurs :**
+   - L'administrateur gère les comptes d'utilisateurs et attribue les rôles appropriés.
+   - Il configure les autorisations d'accès à la plateforme pour assurer la sécurité.
+
+4. **Paramétrage des Ressources :**
+   - L'administrateur configure les ressources nécessaires, telles que les passerelles d'API et les politiques d'API.
+
+5. **Surveillance et Rapports :**
+   - Il surveille les performances de la plateforme à l'aide d'outils intégrés et génère des rapports.
+
+**Exceptions :**
+
+1. **Problèmes d'Accès :**
+   - En cas de problème d'accès à la plateforme, une notification d'erreur est générée.
+   
+2. **Échec de Configuration :**
+   - Si une configuration échoue, un message d'erreur détaillé est affiché, et la configuration précédente reste en place.
+
+**Exigences :**
+
+1. **Sécurité :**
+   - Toutes les modifications doivent respecter les politiques de sécurité définies.
+   - L'authentification à deux facteurs peut être exigée pour les tâches sensibles.
+
+2. **Historique des Modifications :**
+   - Un journal des modifications doit être maintenu pour suivre les ajustements apportés à la plateforme.
+  
+3. **Audit et Rapports :**
+   - La plateforme doit fournir des fonctionnalités de génération de rapports et d'audit pour permettre une traçabilité complète des activités administratives.
+
+Cette fonctionnalité permet à l'administrateur de maintenir une plateforme Azure API Management robuste, sécurisée et conforme aux exigences opérationnelles de l'organisation.
