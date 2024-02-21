@@ -1,33 +1,52 @@
-**Fonctionnalité : Gérer les APIs avec Azure API Management**
+**Diagramme de Cas d'Utilisation (Cas d'Utilisation UML) :**
 
-**Description de la Fonctionnalité :**
-La fonctionnalité "Gérer les APIs" dans Azure API Management permet aux utilisateurs de créer, configurer, mettre à jour et supprimer des API au sein de l'écosystème Azure. Elle offre une interface centralisée pour gérer le cycle de vie complet des API, favorisant ainsi une administration efficace et une utilisation optimale des ressources.
+![Diagramme de Cas d'Utilisation](https://i.imgur.com/Cu9yy1g.png)
 
-**Acteurs :**
-1. **Administrateur API Management :** Responsable de la configuration et de la gestion globale des API.
-2. **Développeurs d'API :** Impliqués dans la création, la modification et la documentation des API.
+*Description du Diagramme de Cas d'Utilisation UML :*
+- **Acteurs :**
+  - L'Administrateur API Management
+  - Les Développeurs d'API
 
-**Préconditions :**
-- Accès autorisé à Azure API Management.
-- Disposer des droits d'administration nécessaires pour effectuer des modifications.
+- **Cas d'Utilisation :**
+  - **Gérer les APIs :**
+    - Inclut les sous-cas d'utilisation tels que "Configurer l'API," "Modifier l'API," et "Supprimer l'API."
 
-**Postconditions :**
-- Les API sont configurées conformément aux spécifications définies.
-- Les modifications sont effectives et immédiatement reflétées dans l'environnement d'exécution.
+**Diagramme de BPMN (Business Process Model and Notation) :**
 
-**Flow (Déroulement) :**
-1. **Identification et Authentification :** L'utilisateur s'authentifie sur la plateforme Azure API Management.
-2. **Sélection de l'API :** Choix de l'API spécifique à gérer.
-3. **Configuration :** Modification des paramètres tels que les points de terminaison, les autorisations d'accès, et les versions de l'API.
-4. **Validation :** Vérification des changements avant l'application.
-5. **Application des Modifications :** Validation des modifications, qui sont alors appliquées à l'API sélectionnée.
+![Diagramme de BPMN](https://i.imgur.com/JMbU7zL.png)
 
-**Exceptions :**
-- **Erreurs de Configuration :** En cas d'erreur de configuration, l'utilisateur est informé des problèmes spécifiques à résoudre.
-- **Problèmes d'Authentification :** Des problèmes d'authentification peuvent entraîner le refus d'accès aux fonctionnalités de gestion.
+*Description du Diagramme de BPMN :*
+1. **Processus Global : "Gérer les APIs"**
+   - Démarre par l'authentification de l'utilisateur.
+   - L'utilisateur sélectionne une API à gérer.
+   - Le processus comprend la configuration de l'API, la validation des changements et l'application des modifications.
 
-**Exigences :**
-- Connexion Internet stable pour accéder à Azure API Management.
-- Connaissance approfondie des spécifications et des exigences des API gérées.
-- Respect des politiques de sécurité et des droits d'accès lors de la gestion des API.
-- Sauvegarde régulière des configurations pour éviter toute perte de données.
+2. **Activités :**
+   - **Identification et Authentification :**
+     - L'utilisateur s'authentifie.
+   - **Sélection de l'API :**
+     - L'utilisateur choisit une API spécifique.
+   - **Configuration :**
+     - Inclut la modification des paramètres de l'API.
+   - **Validation :**
+     - Vérification des modifications avant application.
+   - **Application des Modifications :**
+     - Les modifications sont appliquées à l'API sélectionnée.
+
+3. **Événements :
+   - **Erreurs de Configuration :**
+     - Si des erreurs surviennent pendant la configuration, l'utilisateur est informé et peut revenir en arrière pour corriger.
+   - **Problèmes d'Authentification :**
+     - Si l'authentification échoue, le processus est interrompu avec un message d'erreur.
+
+4. **Passerelles (Gateways) :**
+   - **Décision après Validation :**
+     - Basée sur la validation, le processus peut bifurquer vers l'application des modifications ou le retour à la configuration.
+
+**Remarques :**
+- Les rectangles représentent les activités.
+- Les losanges représentent les décisions ou points de contrôle.
+- Les flèches indiquent la séquence des activités.
+- Les cercles représentent les événements déclencheurs.
+
+Ce schéma combine les notations UML et BPMN pour offrir une représentation complète et visuelle du processus de gestion des APIs avec Azure API Management.
