@@ -1,5 +1,45 @@
-Une solution de gestion d’API basée sur Azure API Management et le portail développeur implique les acteurs suivants :
+Bonjour, je suis Copilot, un assistant virtuel qui peut vous aider avec vos questions. 😊
 
-Les éditeurs d’API : ce sont les personnes qui publient et gèrent les API dans Azure API Management. Ils utilisent le portail d’administration1 pour configurer les API, les plans, les produits, les politiques, les abonnements, les certificats, les groupes, les utilisateurs et les notifications2.
-Les développeurs d’API : ce sont les personnes qui créent et maintiennent les services back-end exposés par les API. Ils peuvent utiliser différents outils et langages pour développer les API, et les déployer dans Azure ou ailleurs3.
-Les consommateurs d’API : ce sont les personnes qui utilisent les API publiées dans Azure API Management. Ils peuvent être des développeurs internes ou externes, des partenaires ou des clients. Ils utilisent le portail développeur pour découvrir, tester et consommer les API, ainsi que pour gérer leurs abonnements, leurs clés et leurs profils.
+La fonctionnalité de gérer/publier les API dans Azure API Management permet de créer, de configurer, de sécuriser et de documenter les API dans une plateforme unifiée. Voici le cas d'utilisation global et les sous cas d'utilisations :
+
+- Cas d'utilisation global : Gérer et publier les API dans Azure API Management
+    - Objectif : Exposer des services back-end en tant qu'API, les protéger, les transformer, les surveiller et les promouvoir auprès des développeurs.
+    - Acteurs : Les éditeurs d'API, les développeurs d'API et les consommateurs d'API.
+    - Scénario : Un éditeur d'API importe une spécification OpenAPI d'un service back-end dans Azure API Management, la configure avec des plans, des produits, des politiques, des abonnements et des notifications, la teste dans le portail Azure, et la publie dans le portail développeur. Un consommateur d'API accède au portail développeur, découvre l'API, s'abonne à un produit, obtient une clé d'abonnement, et appelle l'API avec la clé. Un développeur d'API crée et maintient le service back-end, et le met à jour en fonction des besoins et des commentaires.
+- Sous cas d'utilisations :
+    - Importer une API dans Azure API Management
+        - Objectif : Créer une façade pour un service back-end dans Azure API Management, en utilisant une spécification OpenAPI ou une URL du service.
+        - Acteurs : Les éditeurs d'API
+        - Scénario : Un éditeur d'API accède au portail Azure, sélectionne son instance Azure API Management, et clique sur API. Il choisit d'importer une API à partir d'une spécification OpenAPI ou d'une URL du service, et remplit les informations requises, telles que le nom, la description, le suffixe de chemin, les produits, etc. Il valide la création de l'API, et voit les opérations de l'API dans le portail Azure.
+    - Configurer une API dans Azure API Management
+        - Objectif : Définir les paramètres, les plans, les produits, les politiques, les abonnements et les notifications d'une API dans Azure API Management, pour contrôler son comportement, sa sécurité, sa performance et sa visibilité.
+        - Acteurs : Les éditeurs d'API
+        - Scénario : Un éditeur d'API accède au portail Azure, sélectionne son instance Azure API Management, et clique sur API. Il choisit une API qu'il a importée ou créée, et accède à l'onglet Paramètres. Il modifie les paramètres de l'API, tels que le nom, la description, le suffixe de chemin, les produits, etc. Il accède à l'onglet Plans, et crée ou modifie les plans de l'API, qui définissent les quotas, les limites de débit, et les règles d'accès. Il accède à l'onglet Produits, et crée ou modifie les produits de l'API, qui regroupent les API et les plans pour les offrir aux consommateurs. Il accède à l'onglet Politiques, et ajoute ou modifie les politiques de l'API, qui sont des règles d'exécution exprimées en XML, qui permettent de modifier le comportement de l'API, comme la validation, la transformation, le cache, la journalisation, etc. Il accède à l'onglet Abonnements, et gère les abonnements des consommateurs à l'API, qui leur donnent accès à l'API via une clé d'abonnement. Il accède à l'onglet Notifications, et configure les notifications par e-mail envoyées aux éditeurs et aux consommateurs de l'API, comme les demandes d'abonnement, les approbations, les rejets, etc.
+    - Tester une API dans le portail Azure
+        - Objectif : Vérifier le fonctionnement et la performance d'une API dans Azure API Management, en utilisant le testeur d'API intégré dans le portail Azure.
+        - Acteurs : Les éditeurs d'API
+        - Scénario : Un éditeur d'API accède au portail Azure, sélectionne son instance Azure API Management, et clique sur API. Il choisit une API qu'il a importée ou créée, et accède à l'onglet Opérations. Il sélectionne une opération de l'API, et clique sur le bouton Tester. Il remplit les paramètres requis pour l'opération, et clique sur le bouton Envoyer. Il voit la réponse de l'API, avec le code de statut, les en-têtes, le corps, et le temps de réponse. Il peut modifier les paramètres et répéter le test autant de fois qu'il le souhaite.
+    - Publier une API dans le portail développeur
+        - Objectif : Rendre une API disponible pour les consommateurs dans le portail développeur, qui est un site web personnalisable et sécurisé, où les consommateurs peuvent découvrir, tester et consommer les API.
+        - Acteurs : Les éditeurs d'API
+        - Scénario : Un éditeur d'API accède au portail Azure, sélectionne son instance Azure API Management, et clique sur API. Il choisit une API qu'il a importée ou créée, et accède à l'onglet Paramètres. Il s'assure que l'API est associée à au moins un produit, et que le produit est publié. Il accède à l'onglet Portail développeur, et clique sur le bouton Ouvrir le portail. Il voit le portail développeur, où il peut personnaliser l'apparence, le contenu, et les fonctionnalités du site web. Il navigue vers la page de l'API, et voit la documentation, les opérations, et le testeur d'API de l'API. Il peut modifier la page de l'API, et ajouter des informations supplémentaires, comme des exemples, des tutoriels, ou des commentaires.
+    - Accéder au portail développeur
+        - Objectif : Accéder au portail développeur pour découvrir, tester et consommer les API publiées dans Azure API Management.
+        - Acteurs : Les consommateurs d'API
+        - Scénario : Un consommateur d'API accède au portail développeur, soit en utilisant l'URL fournie par l'éditeur d'API, soit en la trouvant dans le portail Azure. Il voit le portail développeur, où il peut explorer les API, les produits, et les plans disponibles. Il peut s'inscrire ou se connecter au portail développeur, pour accéder à plus de fonctionnalités, comme la gestion de son profil, de ses abonnements, et de ses clés d'abonnement.
+    - S'abonner à un produit
+        - Objectif : S'abonner à un produit qui contient une ou plusieurs API dans Azure API Management, pour obtenir une clé d'abonnement qui permet d'accéder aux API.
+        - Acteurs : Les consommateurs d'API
+        - Scénario : Un consommateur d'API accède au portail développeur, et se connecte avec son compte. Il navigue vers la page des produits, et choisit un produit qui contient l'API qu'il veut utiliser. Il clique sur le bouton S'abonner, et remplit le formulaire d'abonnement, en choisissant un nom et un plan pour son abonnement. Il soumet le formulaire, et attend l'approbation de l'éditeur d'API, si nécessaire. Il reçoit une notification par e-mail lorsque son abonnement est approuvé, et il voit sa clé d'abonnement dans le portail développeur. Il peut utiliser sa clé d'abonnement pour appeler les API du produit.
+    - Appeler une API avec une clé d'abonnement
+        - Objectif : Appeler une API publiée dans Azure API Management, en utilisant une clé d'abonnement pour s'authentifier et autoriser l'accès à l'API.
+        - Acteurs : Les consommateurs d'API
+        - Scénario : Un consommateur d'API accède au portail développeur, et se connecte avec son compte. Il navigue vers la page de l'API qu'il veut appeler, et voit la documentation, les opérations, et le testeur d'API de l'API. Il sélectionne une opération de l'API, et clique sur le bouton Essayer. Il remplit les paramètres requis pour
+
+Source: Conversation with Bing, 2024-02-27
+(1) Tutoriel - Importer et publier votre première API dans Gestion des API .... https://learn.microsoft.com/fr-fr/azure/api-management/import-and-publish.
+(2) Gestion des API Azure - Vue d’ensemble et concepts clés. https://learn.microsoft.com/fr-fr/azure/api-management/api-management-key-concepts.
+(3) Publier et gérer vos API avec Gestion des API Azure - Training. https://learn.microsoft.com/fr-fr/training/modules/publish-manage-apis-with-azure-api-management/.
+(4) Gestion des APIs avec Azure API Management - Samir AREZKI. https://fr.slideshare.net/msarezki/gestion-des-apis-avec-azure-api-management-samir-arezki.
+(5) undefined. https://conferenceapi.azurewebsites.net.
+(6) undefined. https://conferenceapi.azurewebsites.net?format=json.
