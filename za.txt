@@ -1,39 +1,35 @@
-Bonjour, je suis Copilot, un assistant virtuel qui peut vous aider avec vos questions. 😊
+Bien sûr ! Voici des informations sur la fonctionnalité **Découvrir/Consulter des API** dans **Azure API Management** :
 
-La fonctionnalité de Consommer les APIs dans Azure API Management permet aux développeurs d'accéder aux APIs publiées dans une plateforme unifiée et sécurisée. Voici le cas d'utilisation global et les sous cas d'utilisations :
+1. **Cas d'utilisation global**:
+    - **Description**: La fonctionnalité Découvrir/Consulter des API permet aux développeurs, aux partenaires et aux employés d'accéder aux informations essentielles concernant les API disponibles dans l'environnement API Management.
+    - **Objectif**: Faciliter la découverte, l'exploration et la compréhension des API disponibles.
+    - **Acteurs**:
+        - **Développeurs externes**: Ils recherchent des API pour intégrer dans leurs applications.
+        - **Partenaires**: Ils souhaitent explorer les API pour des intégrations spécifiques.
+        - **Employés internes**: Ils ont besoin d'accéder aux API pour des raisons opérationnelles ou de développement.
+    
+2. **Sous-cas d'utilisation**:
+    - **Objectif**: Consulter la documentation et les détails des API.
+    - **Acteurs**:
+        - **Développeurs externes**, **partenaires**, **employés internes**.
+    - **Scénario**:
+        1. L'utilisateur se connecte au portail des développeurs d'API Management.
+        2. Il recherche une API spécifique ou explore les catégories d'API disponibles.
+        3. Il accède à la documentation, aux exemples de requêtes, aux schémas et aux informations sur les points de terminaison.
+    - **Précondition**: L'utilisateur doit être authentifié et avoir accès au portail des développeurs.
+    - **Postcondition**: L'utilisateur a accès aux informations complètes sur l'API consultée.
+    - **Exceptions**:
+        - Si l'API est privée, l'utilisateur doit avoir les autorisations appropriées pour y accéder.
+        - Si l'API n'est pas documentée correctement, l'utilisateur peut rencontrer des difficultés lors de la consultation.
+    - **Exigences**:
+        - La documentation doit être à jour et précise.
+        - Le portail des développeurs doit être convivial et intuitif.
 
-- Cas d'utilisation global : Consommer les APIs dans Azure API Management
-    - Objectif : Utiliser les APIs exposées par Azure API Management pour créer des applications ou des intégrations.
-    - Acteurs : Les consommateurs d'API, les éditeurs d'API et le service API Management.
-    - Scénario : Un consommateur d'API accède au portail développeur, s'inscrit ou se connecte, découvre les APIs, les produits et les plans disponibles, s'abonne à un produit, obtient une clé d'abonnement, teste et appelle les APIs avec la clé, et gère son profil, ses abonnements et ses clés. Un éditeur d'API publie et gère les APIs, les produits, les plans, les politiques, les abonnements et les notifications dans le portail Azure. Le service API Management assure la sécurité, la performance, la surveillance et la transformation des APIs.
-- Sous cas d'utilisations :
-    - S'inscrire au portail développeur
-        - Objectif : Créer un compte utilisateur pour accéder au portail développeur, qui est un site web personnalisable et sécurisé, où les consommateurs peuvent découvrir, tester et consommer les APIs.
-        - Acteurs : Les consommateurs d'API
-        - Scénario : Un consommateur d'API accède au portail développeur, soit en utilisant l'URL fournie par l'éditeur d'API, soit en la trouvant dans le portail Azure. Il clique sur le bouton S'inscrire, et remplit le formulaire d'inscription, en fournissant son nom, son e-mail, son mot de passe et son consentement aux conditions d'utilisation. Il soumet le formulaire, et reçoit un e-mail de confirmation. Il clique sur le lien de confirmation, et voit son compte activé dans le portail développeur.
-        - Préconditions : Le portail développeur est configuré et accessible par l'éditeur d'API. L'inscription des utilisateurs est autorisée par l'éditeur d'API.
-        - Postconditions : Le consommateur d'API dispose d'un compte utilisateur dans le portail développeur. Il peut se connecter avec son e-mail et son mot de passe, et accéder aux fonctionnalités du portail.
-        - Exceptions : Si le consommateur d'API fournit des informations invalides ou incomplètes, le système affiche un message d'erreur et annule l'inscription. Si le consommateur d'API ne confirme pas son e-mail dans un délai donné, le système annule l'inscription et supprime le compte. Si le portail développeur est indisponible ou atteint sa limite de capacité, le système affiche un message d'erreur et annule l'inscription.
-        - Exigences : Le consommateur d'API doit fournir un e-mail valide, un mot de passe sécurisé, et accepter les conditions d'utilisation. Le consommateur d'API doit confirmer son e-mail en cliquant sur le lien envoyé par le système.
-    - Se connecter au portail développeur
-        - Objectif : Se connecter au portail développeur avec son compte utilisateur, pour accéder aux fonctionnalités du portail, comme la découverte, le test, la consommation et la gestion des APIs.
-        - Acteurs : Les consommateurs d'API
-        - Scénario : Un consommateur d'API accède au portail développeur, soit en utilisant l'URL fournie par l'éditeur d'API, soit en la trouvant dans le portail Azure. Il clique sur le bouton Se connecter, et entre son e-mail et son mot de passe. Il valide la connexion, et voit son profil dans le portail développeur.
-        - Préconditions : Le portail développeur est configuré et accessible par l'éditeur d'API. Le consommateur d'API dispose d'un compte utilisateur dans le portail développeur.
-        - Postconditions : Le consommateur d'API est connecté au portail développeur. Il peut accéder aux fonctionnalités du portail, comme la découverte, le test, la consommation et la gestion des APIs.
-        - Exceptions : Si le consommateur d'API fournit un e-mail ou un mot de passe incorrect, le système affiche un message d'erreur et refuse la connexion. Si le consommateur d'API a oublié son mot de passe, il peut demander une réinitialisation par e-mail. Si le portail développeur est indisponible ou atteint sa limite de capacité, le système affiche un message d'erreur et refuse la connexion.
-        - Exigences : Le consommateur d'API doit fournir son e-mail et son mot de passe valides. Le consommateur d'API doit confirmer son identité en cas de connexion depuis un nouvel appareil ou un nouvel emplacement.
-    - Découvrir les APIs, les produits et les plans
-        - Objectif : Découvrir les APIs, les produits et les plans disponibles dans le portail développeur, qui sont des offres publiées par l'éditeur d'API, qui regroupent les APIs et les plans pour les offrir aux consommateurs.
-        - Acteurs : Les consommateurs d'API
-        - Scénario : Un consommateur d'API accède au portail développeur, et se connecte avec son compte. Il navigue vers la page des APIs, et voit la liste des APIs publiées par l'éditeur d'API. Il peut filtrer, trier et rechercher les APIs par nom, catégorie, étiquette, etc. Il peut cliquer sur une API pour voir sa documentation, ses opérations, et son testeur d'API. Il navigue vers la page des produits, et voit la liste des produits publiés par l'éditeur d'API. Il peut filtrer, trier et rechercher les produits par nom, catégorie, étiquette, etc. Il peut cliquer sur un produit pour voir sa description, ses conditions d'utilisation, ses APIs et ses plans associés.
-        - Préconditions : Le portail développeur est configuré et accessible par l'éditeur d'API. Le consommateur d'API est connecté au portail développeur. Il existe au moins une API et un produit publiés par l'éditeur d'API.
-        - Postconditions : Le consommateur d'API a découvert les APIs, les produits et les plans disponibles dans le portail développeur. Il peut s'abonner à un produit, obtenir une clé d'abonnement, tester et appeler les APIs.
-        - Exceptions : Si le portail développeur est indisponible ou atteint sa limite de capacité, le système affiche un message d'erreur et empêche la découverte des APIs, des produits et des plans.
-        - Exigences : Le consommateur d'API doit respecter les conditions d'utilisation des APIs, des produits et des plans. Le consommateur d'API doit avoir les droits d'accès nécessaires pour voir les APIs, les produits et les plans..
+N'hésitez pas à me poser d'autres questions si vous avez besoin de plus d'informations ! 😊
 
-Source: Conversation with Bing, 2024-02-27
-(1) Gestion des API Azure - Vue d’ensemble et concepts clés. https://learn.microsoft.com/fr-fr/azure/api-management/api-management-key-concepts.
-(2) API Management - Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/products/api-management/.
-(3) Planifier et gérer les coûts pour la gestion des API Azure. https://learn.microsoft.com/fr-fr/azure/api-management/plan-manage-costs.
-(4) en.wikipedia.org. https://en.wikipedia.org/wiki/API_management.
+Source: Conversation with Bing, 2024-02-29
+(1) API Management - Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/products/api-management/.
+(2) Tarification de Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/pricing/details/api-management/.
+(3) Documentation Gestion des API | Microsoft Learn. https://learn.microsoft.com/fr-fr/azure/api-management/.
+(4) Utilisation d’identités managées dans le service Gestion des API Azure .... https://learn.microsoft.com/fr-fr/azure/api-management/api-management-howto-use-managed-service-identity.
+(5) Gestion des API Azure - Vue d’ensemble et concepts clés. https://learn.microsoft.com/fr-fr/azure/api-management/api-management-key-concepts.
