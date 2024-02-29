@@ -1,35 +1,59 @@
-Bien sûr ! Voici des informations sur la fonctionnalité **Découvrir/Consulter des API** dans **Azure API Management** :
+Bien sûr ! Voici des informations sur la fonctionnalité de **surveillance des API** dans **Azure API Management** :
 
-1. **Cas d'utilisation global**:
-    - **Description**: La fonctionnalité Découvrir/Consulter des API permet aux développeurs, aux partenaires et aux employés d'accéder aux informations essentielles concernant les API disponibles dans l'environnement API Management.
-    - **Objectif**: Faciliter la découverte, l'exploration et la compréhension des API disponibles.
-    - **Acteurs**:
-        - **Développeurs externes**: Ils recherchent des API pour intégrer dans leurs applications.
-        - **Partenaires**: Ils souhaitent explorer les API pour des intégrations spécifiques.
-        - **Employés internes**: Ils ont besoin d'accéder aux API pour des raisons opérationnelles ou de développement.
-    
-2. **Sous-cas d'utilisation**:
-    - **Objectif**: Consulter la documentation et les détails des API.
-    - **Acteurs**:
-        - **Développeurs externes**, **partenaires**, **employés internes**.
-    - **Scénario**:
-        1. L'utilisateur se connecte au portail des développeurs d'API Management.
-        2. Il recherche une API spécifique ou explore les catégories d'API disponibles.
-        3. Il accède à la documentation, aux exemples de requêtes, aux schémas et aux informations sur les points de terminaison.
-    - **Précondition**: L'utilisateur doit être authentifié et avoir accès au portail des développeurs.
-    - **Postcondition**: L'utilisateur a accès aux informations complètes sur l'API consultée.
-    - **Exceptions**:
-        - Si l'API est privée, l'utilisateur doit avoir les autorisations appropriées pour y accéder.
-        - Si l'API n'est pas documentée correctement, l'utilisateur peut rencontrer des difficultés lors de la consultation.
-    - **Exigences**:
-        - La documentation doit être à jour et précise.
-        - Le portail des développeurs doit être convivial et intuitif.
+1. **Description globale**:
+    - La fonctionnalité de surveillance des API permet aux utilisateurs de visualiser, interroger, router, archiver et exploiter les métriques et les journaux provenant de leur service **Azure API Management**.
+    - Elle offre une visibilité en quasi temps réel sur l'intégrité des API.
+
+2. **Objectif**:
+    - Faciliter la surveillance et la gestion des API publiées dans **Azure API Management**.
+    - Permettre aux administrateurs et aux développeurs de suivre les performances, la disponibilité et l'utilisation des API.
+
+3. **Acteurs**:
+    - **Administrateurs d'API Management**: Ils configurent et surveillent les métriques et les journaux.
+    - **Développeurs d'API**: Ils utilisent les informations de surveillance pour optimiser leurs API.
+
+4. **Sous-cas d'utilisation**:
+    a. **Afficher les métriques de vos API**:
+        - **Objectif**: Visualiser les métriques en quasi temps réel pour évaluer l'intégrité des API.
+        - **Acteurs**: Administrateurs, développeurs.
+        - **Scénario**:
+            1. Accéder au portail Azure et à l'instance **Azure API Management**.
+            2. Examiner les principales métriques telles que la capacité et le nombre de demandes.
+            3. Explorer les métriques détaillées pour obtenir des informations spécifiques.
+        - **Précondition**: Authentification et accès au portail des développeurs.
+        - **Postcondition**: Informations sur l'état des API consultées.
+
+    b. **Configurer une règle d'alerte**:
+        - **Objectif**: Recevoir des alertes en cas de problèmes avec les API.
+        - **Acteurs**: Administrateurs.
+        - **Scénario**:
+            1. Définir des seuils pour les métriques (par exemple, capacité, demandes).
+            2. Configurer des alertes pour être notifié en cas de dépassement des seuils.
+        - **Précondition**: Authentification et accès au portail des administrateurs.
+        - **Postcondition**: Alertes configurées pour les métriques spécifiées.
+
+    c. **Afficher les journaux d'activité**:
+        - **Objectif**: Examiner les journaux pour comprendre les événements liés aux API.
+        - **Acteurs**: Administrateurs, développeurs.
+        - **Scénario**:
+            1. Accéder au portail Azure et à l'instance **Azure API Management**.
+            2. Consulter les journaux d'activité pour identifier les erreurs, les appels réussis, etc.
+        - **Précondition**: Authentification et accès au portail des développeurs.
+        - **Postcondition**: Informations sur les événements liés aux API.
+
+    d. **Activer et afficher les journaux de ressources**:
+        - **Objectif**: Examiner les journaux de ressources pour comprendre les opérations effectuées sur les API.
+        - **Acteurs**: Administrateurs.
+        - **Scénario**:
+            1. Activer les journaux de ressources pour l'instance **Azure API Management**.
+            2. Examiner les journaux pour suivre les modifications, les déploiements, etc.
+        - **Précondition**: Authentification et accès au portail des administrateurs.
+        - **Postcondition**: Informations sur les opérations effectuées sur l'instance.
 
 N'hésitez pas à me poser d'autres questions si vous avez besoin de plus d'informations ! 😊
 
 Source: Conversation with Bing, 2024-02-29
-(1) API Management - Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/products/api-management/.
-(2) Tarification de Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/pricing/details/api-management/.
-(3) Documentation Gestion des API | Microsoft Learn. https://learn.microsoft.com/fr-fr/azure/api-management/.
-(4) Utilisation d’identités managées dans le service Gestion des API Azure .... https://learn.microsoft.com/fr-fr/azure/api-management/api-management-howto-use-managed-service-identity.
-(5) Gestion des API Azure - Vue d’ensemble et concepts clés. https://learn.microsoft.com/fr-fr/azure/api-management/api-management-key-concepts.
+(1) Tutoriel : Superviser les API publiées dans la Gestion des API Azure .... https://learn.microsoft.com/fr-fr/azure/api-management/api-management-howto-use-azure-monitor.
+(2) Benefits of using Azure API Management with microservices. https://azure.microsoft.com/fr-fr/blog/benefits-of-using-azure-api-management-with-microservices/.
+(3) Gestion des API Azure prend désormais en charge l’intégration avec .... https://azure.microsoft.com/fr-ca/updates/azure-api-management-now-supports-integration-with-azure-app-service/.
+(4) Vue d’ensemble de la Gestion des API Azure | Microsoft Learn. https://learn.microsoft.com/fr-fr/shows/azure/api-management-overview.
