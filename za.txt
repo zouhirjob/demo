@@ -1,69 +1,15 @@
-Bien sûr ! Voici des informations sur la fonctionnalité de **Gestion des API** dans **Azure API Management** :
-
-1. **Description globale**:
-    - La fonctionnalité de Gestion des API dans **Azure API Management** permet aux utilisateurs de créer, provisionner, configurer, surveiller et sécuriser les API.
-    - Elle offre une plateforme centralisée pour gérer toutes les API, qu'elles soient hébergées dans Azure, dans d'autres clouds ou localement.
-
-2. **Objectif**:
-    - Faciliter la gestion complète du cycle de vie des API, de leur création à leur publication.
-    - Offrir un emplacement unique pour configurer les politiques, les points de terminaison, les versions, etc.
-
-3. **Acteurs**:
-    - **Éditeurs d'API**: Ils créent et configurent les API.
-    - **Développeurs d'API**: Ils utilisent les API pour construire des applications.
-    - **Consommateurs d'API**: Ils accèdent aux API pour intégrer dans leurs applications.
-    - **Administrateurs PaaS (Platform as a Service)**: Ils gèrent l'ensemble de l'environnement API Management.
-
-4. **Sous-cas d'utilisation**:
-
-    a. **Importer une API dans Azure API Management**:
-        - **Objectif**: Ajouter une API existante à l'instance Azure API Management.
-        - **Acteurs**: Éditeurs d'API.
-        - **Scénario**:
-            1. Importer l'API depuis un fichier OpenAPI, Swagger, WSDL, etc.
-            2. Configurer les détails de l'API (points de terminaison, politiques, etc.).
-        - **Préconditions**: L'API doit être accessible et compatible avec Azure API Management.
-        - **Postconditions**: L'API est ajoutée à l'instance.
-
-    b. **Configurer une API dans Azure API Management**:
-        - **Objectif**: Personnaliser les paramètres et les politiques de l'API.
-        - **Acteurs**: Éditeurs d'API.
-        - **Scénario**:
-            1. Définir les points de terminaison, les versions, les quotas, etc.
-            2. Appliquer des politiques (authentification, autorisation, mise en cache, etc.).
-        - **Préconditions**: L'API doit être importée dans l'instance.
-        - **Postconditions**: L'API est configurée et prête à être utilisée.
-
-    c. **Tester une API dans le portail Azure**:
-        - **Objectif**: Vérifier le bon fonctionnement de l'API.
-        - **Acteurs**: Développeurs d'API.
-        - **Scénario**:
-            1. Accéder au portail Azure.
-            2. Utiliser l'interface de test pour appeler l'API.
-        - **Préconditions**: L'API doit être configurée et publiée.
-        - **Postconditions**: L'API est testée avec succès.
-
-    d. **Publier une API dans le portail développeur**:
-        - **Objectif**: Mettre l'API à disposition des développeurs externes.
-        - **Acteurs**: Éditeurs d'API, consommateurs d'API.
-        - **Scénario**:
-            1. Configurer le portail développeur avec la documentation de l'API.
-            2. Générer des clés d'abonnement pour les développeurs.
-        - **Préconditions**: L'API doit être configurée et testée.
-        - **Postconditions**: L'API est accessible aux développeurs via le portail.
-
-    e. **Exigences**:
-        - Documentation complète de l'API pour les développeurs.
-        - Connaissance des méthodes d'appel d'API (GET, POST, etc.).
-
-    f. **Exceptions**:
-        - Si l'API n'est pas correctement documentée, les développeurs peuvent rencontrer des difficultés lors de son utilisation.
-        - Si les clés d'abonnement ne sont pas générées, les développeurs ne pourront pas accéder à l'API.
-
-N'hésitez pas à me poser d'autres questions si vous avez besoin de plus d'informations ! 😊
-
-Source: Conversation with Bing, 2024-02-29
-(1) API Management - Gestion des API | Microsoft Azure. https://azure.microsoft.com/fr-fr/products/api-management/.
-(2) Gestion des API Azure - Vue d’ensemble et concepts clés. https://learn.microsoft.com/fr-fr/azure/api-management/api-management-key-concepts.
-(3) Azure API Management : Introduction — Version Française. https://medium.com/charot/azure-api-management-introduction-version-fran%C3%A7aise-f87e9573b8ef.
-(4) Gestion des API Azure prend désormais en charge l’intégration avec .... https://azure.microsoft.com/fr-ca/updates/azure-api-management-now-supports-integration-with-azure-app-service/.
+Suppression d’une API:
+Objectif: Permettre aux utilisateurs d’effacer une API de l’instance Azure API Management.
+Acteurs: Éditeurs d’API, administrateurs.
+Scénario:
+L’utilisateur accède à l’instance Azure API Management.
+Il sélectionne l’API à supprimer.
+Il confirme la suppression.
+Préconditions: L’API doit être configurée dans l’instance.
+Postconditions:
+L’API est supprimée de l’instance.
+Les métadonnées et les configurations associées à l’API sont effacées.
+Exigences:
+Confirmation de l’utilisateur avant la suppression.
+Exceptions:
+Si l’API est supprimée accidentellement, la fonctionnalité de suppression réversible peut être utilisée pour récupérer l’API.
