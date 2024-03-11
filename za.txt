@@ -1,1 +1,36 @@
-Dans le contexte de la gestion d'API et en ce qui concerne l'importation d'une API, il est essentiel de noter que le processus d'importation est actuellement planifié pour être automatisé à travers un pipeline Azure DevOps. Cette approche vise à garantir une intégration continue et une mise en œuvre efficace des mises à jour de l'API.
+**Sous-fonctionnalité : Importation et Publication Automatique d'API via un Pipeline**
+
+1. **Objectif** :
+   - L'objectif de cette sous-fonctionnalité est de permettre l'**importation automatique** d'API dans **Azure API Management** à partir d'une source externe (par exemple, un référentiel Git) et de les **publier automatiquement** pour une utilisation par les développeurs et les clients.
+
+2. **Acteur** :
+   - L'acteur principal est l'**administrateur d'API** ou l'**équipe DevOps** responsable de la gestion des API dans Azure API Management.
+
+3. **Scénario** :
+   - L'administrateur configure un **pipeline d'intégration continue/déploiement continu (CI/CD)** qui surveille les modifications dans le référentiel Git.
+   - Lorsqu'un développeur ajoute ou modifie une API dans le référentiel Git, le pipeline détecte ces changements.
+   - Le pipeline automatiquement **importe** les modifications dans Azure API Management.
+   - Une fois importées, les API sont **publiées automatiquement** pour que les clients puissent les utiliser.
+
+4. **Précondition** :
+   - Le référentiel Git contient les définitions d'API (par exemple, fichiers OpenAPI, Swagger, WSDL, etc.).
+
+5. **Postcondition** :
+   - Les API sont disponibles dans Azure API Management et peuvent être utilisées par les développeurs et les clients.
+
+6. **Exigences** :
+   - Le pipeline doit être configuré pour surveiller le référentiel Git.
+   - Les définitions d'API doivent être valides et conformes aux spécifications (par exemple, OpenAPI).
+   - Les autorisations d'accès au référentiel Git doivent être correctement configurées.
+
+7. **Exception** :
+   - Si une définition d'API est incorrecte ou ne peut pas être importée, le pipeline doit générer une **alerte** pour que l'administrateur puisse résoudre le problème manuellement.
+
+En mettant en place cette sous-fonctionnalité, l'équipe peut automatiser le processus d'importation et de publication des API, ce qui accélère le déploiement et améliore la réactivité envers les changements dans le code source.
+
+N'hésitez pas si vous avez besoin de plus d'informations ou d'autres détails ! 😊
+
+Source: Conversation with Bing, 2024-03-11
+(1) Gestion des API : définition, avantages et fonctionnalités - Appvizer. https://www.appvizer.fr/magazine/services-informatiques/gestion-des-api/gestion-des-api.
+(2) Adoptez les API REST pour vos projets web - OpenClassrooms. https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api.
+(3) Qu'est-ce que l'intégration d'API : définition et guide de l'automatisation. https://astera.com/fr/knowledge-center/what-is-api-integration/.
