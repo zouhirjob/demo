@@ -7,3 +7,6 @@ Mise à jour de la documentation : Actualiser la documentation d’architecture 
 Révision par les pairs : Organiser une session de révision par les pairs pour obtenir des retours et valider les modifications.
 Finalisation du modèle : Apporter les ajustements nécessaires suite aux retours et finaliser le modèle d’architecture.
 Partage avec les parties prenantes : Communiquer le modèle finalisé aux parties prenantes concernées pour révision et approbation.
+
+Mappage des interactions entre les couches applicative et technologique : Identifier et documenter comment les éléments applicatifs interagissent avec les composants technologiques, y compris les interfaces, les protocoles de communication et les exigences de performance.
+Cette sous-tâche vous aidera à assurer que l’architecture est bien intégrée et que les interactions entre les applications et l’infrastructure technologique sont clairement définies.
