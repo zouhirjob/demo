@@ -1,12 +1,1 @@
-Révision des éléments applicatifs existants : Vérifier l’exactitude et l’exhaustivité des éléments applicatifs actuels dans Archi.
-Identification des éléments manquants : Déterminer quels éléments applicatifs doivent être ajoutés ou mis à jour.
-Modélisation des éléments applicatifs : Utiliser ArchiMate pour modéliser les nouveaux éléments applicatifs et les intégrer dans l’architecture existante.
-Validation de la cohérence : S’assurer que les nouveaux éléments sont cohérents avec les standards et les pratiques de l’entreprise.
-Vérification des dépendances : Identifier et documenter les dépendances entre les éléments applicatifs.
-Mise à jour de la documentation : Actualiser la documentation d’architecture pour refléter les changements et ajouts.
-Révision par les pairs : Organiser une session de révision par les pairs pour obtenir des retours et valider les modifications.
-Finalisation du modèle : Apporter les ajustements nécessaires suite aux retours et finaliser le modèle d’architecture.
-Partage avec les parties prenantes : Communiquer le modèle finalisé aux parties prenantes concernées pour révision et approbation.
-
-Mappage des interactions entre les couches applicative et technologique : Identifier et documenter comment les éléments applicatifs interagissent avec les composants technologiques, y compris les interfaces, les protocoles de communication et les exigences de performance.
-Cette sous-tâche vous aidera à assurer que l’architecture est bien intégrée et que les interactions entre les applications et l’infrastructure technologique sont clairement définies.
+https://www.urbanisation-si.com/archimate-modelisation-de-lalignement-des-couches-d-application-et-de-technologie-9
