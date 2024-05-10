@@ -1,7 +1,5 @@
-https://www.urbanisation-si.com/archimate-modelisation-de-lalignement-des-couches-d-application-et-de-technologie-9
-
-Introduction à Cloudflare :
-Cloudflare est une plateforme de services Internet qui offre une gamme diversifiée de solutions pour améliorer la performance, la sécurité et la fiabilité des sites web et des applications en ligne. Parmi ses services, Cloudflare Firewall Application se distingue comme une solution de sécurité avancée qui protège les applications web contre une variété de menaces en ligne, y compris les attaques par déni de service distribué (DDoS), les injections SQL, les tentatives d'exploitation de vulnérabilités, et bien plus encore.
-
-Introduction à l'intégration de notre solution de gestion API avec Cloudflare Firewall Application :
-L'intégration de notre solution de gestion API avec Cloudflare Firewall Application est une étape cruciale pour garantir la sécurité et la fiabilité de nos services API. En suivant les recommandations et les initiatives de Cloudflare, nous renforçons la protection de nos API contre les menaces en ligne, en utilisant les fonctionnalités avancées de filtrage et de règles de sécurité fournies par le firewall d'application. Cette intégration nous permet de détecter et de bloquer proactivement les tentatives d'exploitation et les attaques contre nos API, assurant ainsi la disponibilité et l'intégrité des données pour nos utilisateurs. En associant nos services de gestion API à la puissance de Cloudflare Firewall Application, nous garantissons une protection complète et en temps réel de nos infrastructures contre les menaces les plus sophistiquées du cyberespace.
+Le récit pourrait s'appeler "Révision du modèle de sécurité et mise en place du premier diagramme de journalisation" avec les critères d'acceptation suivants :
+1. Examiner et mettre à jour le modèle de sécurité existant.
+2. Créer un premier diagramme de journalisation pour enregistrer les événements système.
+3. Assurer la conformité aux normes de sécurité et de confidentialité en vigueur.
+4. Tester la fonctionnalité de journalisation pour garantir son efficacité.
